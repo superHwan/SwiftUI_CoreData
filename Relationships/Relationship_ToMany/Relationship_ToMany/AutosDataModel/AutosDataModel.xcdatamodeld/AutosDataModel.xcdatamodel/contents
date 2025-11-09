@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23788.4" systemVersion="24G84" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="AutoEntity" representedClassName="AutoEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="model" optional="YES" attributeType="String"/>
+        <attribute name="year" optional="YES" attributeType="String"/>
+        <relationship name="manufacturerEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManufacturerEntity" inverseName="autoEntities" inverseEntity="ManufacturerEntity"/>
+    </entity>
+    <entity name="ManufacturerEntity" representedClassName="ManufacturerEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="autoEntities" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="AutoEntity" inverseName="manufacturerEntity" inverseEntity="AutoEntity"/>
+    </entity>
+</model>
